@@ -11,10 +11,7 @@
   <body>
     <nav id="desktop-nav">
       <div class="logo">
-        <img
-          src="./assets/mylogo2.png"
-          alt="My personal logo"
-        />
+        <img class="golo" src="./assets/mylogo2.png" alt="My personal logo" />
       </div>
       <div>
         <ul class="nav-links">
@@ -22,12 +19,19 @@
           <li><a href="#experience">Experience</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#contact">Contact</a></li>
+          <div class="theme-icon">
+            <img
+              id="icontheme"
+              src="./assets/darkmode.svg"
+              alt="Dark mode image"
+            />
+          </div>
         </ul>
       </div>
     </nav>
     <nav id="hamburger-nav">
       <div class="logo">
-        <img src="./assets/mylogo2.png" alt="My personal logo" />
+        <img class="golos" src="./assets/mylogo2.png" alt="My personal logo" />
       </div>
       <div class="hamburger-menu">
         <div class="hamburger-icon" onclick="toggleMenu()">
@@ -36,6 +40,7 @@
           <span></span>
         </div>
         <div class="menu-links">
+          <li><a id="themetext">Theme</a></li>
           <li><a href="#about" onclick="toggleMenu()">About</a></li>
           <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
           <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
@@ -63,27 +68,61 @@
           </button>
         </div>
         <div id="socials-container">
-          <img
-            src="./assets/facebook.svg"
-            alt="My linkedin profile"
+          <svg
             class="icon"
             onclick="
-          location.href='youtube.com'"
-          />
-          <img
-            src="./assets/linkedin.svg"
+            location.href='https://web.facebook.com/pablojabb69'"
+            xmlns="http://www.w3.org/2000/svg"
+            width="1em"
+            height="1em"
+            viewBox="0 0 24 24"
+          >
+            <g fill="none">
+              <g clip-path="url(#akarIconsFacebookFill0)">
+                <path
+                  fill="currentColor"
+                  fill-rule="evenodd"
+                  d="M0 12.067C0 18.034 4.333 22.994 10 24v-8.667H7V12h3V9.333c0-3 1.933-4.666 4.667-4.666c.866 0 1.8.133 2.666.266V8H15.8c-1.467 0-1.8.733-1.8 1.667V12h3.2l-.533 3.333H14V24c5.667-1.006 10-5.966 10-11.933C24 5.43 18.6 0 12 0S0 5.43 0 12.067"
+                  clip-rule="evenodd"
+                />
+              </g>
+              <defs>
+                <clipPath id="akarIconsFacebookFill0">
+                  <path fill="#fff" d="M0 0h24v24H0z" />
+                </clipPath>
+              </defs>
+            </g>
+          </svg>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="1em"
+            height="1em"
+            viewBox="0 0 20 20"
             alt="My linkedin profile"
             class="iconplus"
-            onclick="
-          location.href='youtube.com'"
-          />
-          <img
-            src="./assets/github.svg"
+            onclick=""
+          >
+            <path
+              fill="currentColor"
+              d="M10 .4C4.698.4.4 4.698.4 10s4.298 9.6 9.6 9.6s9.6-4.298 9.6-9.6S15.302.4 10 .4M7.65 13.979H5.706V7.723H7.65zm-.984-7.024c-.614 0-1.011-.435-1.011-.973c0-.549.409-.971 1.036-.971s1.011.422 1.023.971c0 .538-.396.973-1.048.973m8.084 7.024h-1.944v-3.467c0-.807-.282-1.355-.985-1.355c-.537 0-.856.371-.997.728c-.052.127-.065.307-.065.486v3.607H8.814v-4.26c0-.781-.025-1.434-.051-1.996h1.689l.089.869h.039c.256-.408.883-1.01 1.932-1.01c1.279 0 2.238.857 2.238 2.699z"
+            />
+          </svg>
+
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="1em"
+            height="1em"
+            viewBox="0 0 64 64"
             alt="My Github profile"
             class="icon"
             onclick="
-            location.href='youtube.com'"
-          />
+            location.href='https://github.com/pablojabb'"
+          >
+            <path
+              fill="currentColor"
+              d="M32 0C14 0 0 14 0 32c0 21 19 30 22 30c2 0 2-1 2-2v-5c-7 2-10-2-11-5c0 0 0-1-2-3c-1-1-5-3-1-3c3 0 5 4 5 4c3 4 7 3 9 2c0-2 2-4 2-4c-8-1-14-4-14-15c0-4 1-7 3-9c0 0-2-4 0-9c0 0 5 0 9 4c3-2 13-2 16 0c4-4 9-4 9-4c2 7 0 9 0 9c2 2 3 5 3 9c0 11-7 14-14 15c1 1 2 3 2 6v8c0 1 0 2 2 2c3 0 22-9 22-30C64 14 50 0 32 0"
+            />
+          </svg>
         </div>
       </div>
     </section>
@@ -101,14 +140,38 @@
         <div class="about-details-container">
           <div class="about-containers">
             <div class="details-container">
-              <img src="./assets/exp.svg" alt="Experience icon" class="icon" />
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="1em"
+                height="1em"
+                viewBox="0 0 20 20"
+                alt="Experience icon"
+                class="icon"
+              >
+                <path
+                  fill="currentColor"
+                  d="M4.46 5.16L5 7.46l-.54 2.29l2.01 1.24L7.7 13l2.3-.54l2.3.54l1.23-2.01l2.01-1.24L15 7.46l.54-2.3l-2-1.24l-1.24-2.01l-2.3.55l-2.29-.54l-1.25 2zm5.55 6.34a3.999 3.999 0 1 1 0-8c2.2 0 3.99 1.79 3.99 3.99c0 2.22-1.79 4.01-3.99 4.01m-.02-1C8.33 10.5 7 9.16 7 7.5c0-1.65 1.33-3 2.99-3S13 5.85 13 7.5c0 1.66-1.35 3-3.01 3m3.84 1.1l-1.28 2.24l-2.08-.47L13 19.2l1.4-2.2h2.5zm-7.7.07l1.25 2.25l2.13-.51L7 19.2L5.6 17H3.1z"
+                />
+              </svg>
               <h3>Experience</h3>
               <p>
                 <span class="about-label">Java Development</span><br />2 years
               </p>
             </div>
             <div class="details-container">
-              <img src="./assets/edu.svg" alt="Education icon" class="icon" />
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="1em"
+                height="1em"
+                viewBox="0 0 24 24"
+                alt="Education icon"
+                class="icon"
+              >
+                <path
+                  fill="currentColor"
+                  d="M12 .807L23.835 8.5L22 9.693V16h-2v-5.007l-1 .65V17.5c0 1.47-1.014 2.615-2.253 3.339c-1.265.737-2.945 1.16-4.747 1.16s-3.483-.423-4.747-1.16C6.013 20.115 5 18.969 5 17.499v-5.856L.165 8.5zM7 12.943V17.5c0 .463.33 1.067 1.261 1.61c.908.53 2.227.89 3.739.89s2.831-.36 3.739-.89c.932-.543 1.26-1.147 1.26-1.61v-4.557l-5 3.25zM20.165 8.5L12 3.193L3.835 8.5L12 13.807z"
+                />
+              </svg>
               <h3>Education</h3>
               <p>
                 <span class="about-label">
@@ -120,22 +183,34 @@
           </div>
           <div class="text-container">
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic quis
-              reprehenderit et laborum, rem, dolore eum quod voluptate
-              exercitationem nobis, nihil esse debitis maxime facere minus sint
-              delectus velit in eos quo officiis explicabo deleniti dignissimos.
-              Eligendi illum libero dolorum cum laboriosam corrupti quidem,
-              reiciendis ea magnam? Nulla, impedit fuga!
+              I am a dedicated and passionate programming student looking to
+              build a solid foundation in programming. I am excited about
+              pursuing a career in programming, fuelled by my love for the field
+              and the opportunities it offers. My goal is to make a significant
+              impact by using my skills to solve complex problems and innovate.
+              Apart from my technical interests, I enjoy reading and sharing
+              knowledge with others, which drives my passion for teaching and
+              mentoring. I am eager to continue growing my expertise and achieve
+              success in the programming industry.
             </p>
           </div>
         </div>
       </div>
-      <img
-        src="./assets/arrow.svg"
+
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="1em"
+        height="1em"
+        viewBox="0 0 24 24"
         alt="Arrow icon"
         class="icon arrow"
         onclick="location.href='./#experience'"
-      />
+      >
+        <path
+          fill="currentColor"
+          d="m12 19.164l6.207-6.207l-1.414-1.414L12 16.336l-4.793-4.793l-1.414 1.414zm0-5.65l6.207-6.207l-1.414-1.414L12 10.686L7.207 5.893L5.793 7.307z"
+        />
+      </svg>
     </section>
     <section id="experience">
       <p class="section__text__p1">Explore My</p>
@@ -146,44 +221,84 @@
             <h2 class="experience-sub-title">Frontend Development</h2>
             <div class="article-container">
               <article>
-                <img
-                  src="./assets/check.svg"
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="1em"
+                  height="1em"
+                  viewBox="0 0 20 20"
                   alt="Experience icon"
                   class="icon"
-                />
+                >
+                  <path
+                    fill="currentColor"
+                    fill-rule="evenodd"
+                    d="M3.213 5.8c.015.759-.398 1.785-.935 2.321a2.658 2.658 0 0 0 0 3.76c.53.528.92 1.444.935 2.192c.014.662.273 1.32.778 1.824a2.648 2.648 0 0 0 1.748.775c.791.04 1.827.5 2.387 1.06a2.658 2.658 0 0 0 3.759 0c.56-.56 1.596-1.02 2.387-1.06a2.648 2.648 0 0 0 1.748-.775a2.65 2.65 0 0 0 .777-1.826c.015-.746.4-1.656.929-2.184a2.663 2.663 0 0 0 .006-3.766c-.536-.535-.95-1.562-.934-2.32a2.65 2.65 0 0 0-.778-1.932a2.651 2.651 0 0 0-2.015-.775c-.714.036-1.615-.31-2.12-.816a2.658 2.658 0 0 0-3.76 0c-.504.505-1.406.852-2.12.816a2.651 2.651 0 0 0-2.014.775A2.65 2.65 0 0 0 3.213 5.8m9.828.826a1 1 0 0 1 .389 1.36l-2.768 4.982a1.019 1.019 0 0 1-.298.343a1.001 1.001 0 0 1-1.23-.045l-2.759-2.207a1 1 0 1 1 1.25-1.562l1.853 1.483l2.203-3.966a1 1 0 0 1 1.36-.388"
+                    clip-rule="evenodd"
+                  />
+                </svg>
                 <div>
                   <h3>Java Swing</h3>
                   <p>Experienced</p>
                 </div>
               </article>
               <article>
-                <img
-                  src="./assets/check.svg"
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="1em"
+                  height="1em"
+                  viewBox="0 0 20 20"
                   alt="Experience icon"
                   class="icon"
-                />
+                >
+                  <path
+                    fill="currentColor"
+                    fill-rule="evenodd"
+                    d="M3.213 5.8c.015.759-.398 1.785-.935 2.321a2.658 2.658 0 0 0 0 3.76c.53.528.92 1.444.935 2.192c.014.662.273 1.32.778 1.824a2.648 2.648 0 0 0 1.748.775c.791.04 1.827.5 2.387 1.06a2.658 2.658 0 0 0 3.759 0c.56-.56 1.596-1.02 2.387-1.06a2.648 2.648 0 0 0 1.748-.775a2.65 2.65 0 0 0 .777-1.826c.015-.746.4-1.656.929-2.184a2.663 2.663 0 0 0 .006-3.766c-.536-.535-.95-1.562-.934-2.32a2.65 2.65 0 0 0-.778-1.932a2.651 2.651 0 0 0-2.015-.775c-.714.036-1.615-.31-2.12-.816a2.658 2.658 0 0 0-3.76 0c-.504.505-1.406.852-2.12.816a2.651 2.651 0 0 0-2.014.775A2.65 2.65 0 0 0 3.213 5.8m9.828.826a1 1 0 0 1 .389 1.36l-2.768 4.982a1.019 1.019 0 0 1-.298.343a1.001 1.001 0 0 1-1.23-.045l-2.759-2.207a1 1 0 1 1 1.25-1.562l1.853 1.483l2.203-3.966a1 1 0 0 1 1.36-.388"
+                    clip-rule="evenodd"
+                  />
+                </svg>
                 <div>
                   <h3>HTML</h3>
                   <p>Intermediate</p>
                 </div>
               </article>
               <article>
-                <img
-                  src="./assets/check.svg"
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="1em"
+                  height="1em"
+                  viewBox="0 0 20 20"
                   alt="Experience icon"
                   class="icon"
-                />
+                >
+                  <path
+                    fill="currentColor"
+                    fill-rule="evenodd"
+                    d="M3.213 5.8c.015.759-.398 1.785-.935 2.321a2.658 2.658 0 0 0 0 3.76c.53.528.92 1.444.935 2.192c.014.662.273 1.32.778 1.824a2.648 2.648 0 0 0 1.748.775c.791.04 1.827.5 2.387 1.06a2.658 2.658 0 0 0 3.759 0c.56-.56 1.596-1.02 2.387-1.06a2.648 2.648 0 0 0 1.748-.775a2.65 2.65 0 0 0 .777-1.826c.015-.746.4-1.656.929-2.184a2.663 2.663 0 0 0 .006-3.766c-.536-.535-.95-1.562-.934-2.32a2.65 2.65 0 0 0-.778-1.932a2.651 2.651 0 0 0-2.015-.775c-.714.036-1.615-.31-2.12-.816a2.658 2.658 0 0 0-3.76 0c-.504.505-1.406.852-2.12.816a2.651 2.651 0 0 0-2.014.775A2.65 2.65 0 0 0 3.213 5.8m9.828.826a1 1 0 0 1 .389 1.36l-2.768 4.982a1.019 1.019 0 0 1-.298.343a1.001 1.001 0 0 1-1.23-.045l-2.759-2.207a1 1 0 1 1 1.25-1.562l1.853 1.483l2.203-3.966a1 1 0 0 1 1.36-.388"
+                    clip-rule="evenodd"
+                  />
+                </svg>
                 <div>
                   <h3>CSS</h3>
                   <p>Intermediate</p>
                 </div>
               </article>
               <article>
-                <img
-                  src="./assets/check.svg"
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="1em"
+                  height="1em"
+                  viewBox="0 0 20 20"
                   alt="Experience icon"
                   class="icon"
-                />
+                >
+                  <path
+                    fill="currentColor"
+                    fill-rule="evenodd"
+                    d="M3.213 5.8c.015.759-.398 1.785-.935 2.321a2.658 2.658 0 0 0 0 3.76c.53.528.92 1.444.935 2.192c.014.662.273 1.32.778 1.824a2.648 2.648 0 0 0 1.748.775c.791.04 1.827.5 2.387 1.06a2.658 2.658 0 0 0 3.759 0c.56-.56 1.596-1.02 2.387-1.06a2.648 2.648 0 0 0 1.748-.775a2.65 2.65 0 0 0 .777-1.826c.015-.746.4-1.656.929-2.184a2.663 2.663 0 0 0 .006-3.766c-.536-.535-.95-1.562-.934-2.32a2.65 2.65 0 0 0-.778-1.932a2.651 2.651 0 0 0-2.015-.775c-.714.036-1.615-.31-2.12-.816a2.658 2.658 0 0 0-3.76 0c-.504.505-1.406.852-2.12.816a2.651 2.651 0 0 0-2.014.775A2.65 2.65 0 0 0 3.213 5.8m9.828.826a1 1 0 0 1 .389 1.36l-2.768 4.982a1.019 1.019 0 0 1-.298.343a1.001 1.001 0 0 1-1.23-.045l-2.759-2.207a1 1 0 1 1 1.25-1.562l1.853 1.483l2.203-3.966a1 1 0 0 1 1.36-.388"
+                    clip-rule="evenodd"
+                  />
+                </svg>
                 <div>
                   <h3>JavaScript</h3>
                   <p>Intermediate</p>
@@ -191,25 +306,45 @@
               </article>
 
               <article>
-                <img
-                  src="./assets/check.svg"
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="1em"
+                  height="1em"
+                  viewBox="0 0 20 20"
                   alt="Experience icon"
                   class="icon"
-                />
+                >
+                  <path
+                    fill="currentColor"
+                    fill-rule="evenodd"
+                    d="M3.213 5.8c.015.759-.398 1.785-.935 2.321a2.658 2.658 0 0 0 0 3.76c.53.528.92 1.444.935 2.192c.014.662.273 1.32.778 1.824a2.648 2.648 0 0 0 1.748.775c.791.04 1.827.5 2.387 1.06a2.658 2.658 0 0 0 3.759 0c.56-.56 1.596-1.02 2.387-1.06a2.648 2.648 0 0 0 1.748-.775a2.65 2.65 0 0 0 .777-1.826c.015-.746.4-1.656.929-2.184a2.663 2.663 0 0 0 .006-3.766c-.536-.535-.95-1.562-.934-2.32a2.65 2.65 0 0 0-.778-1.932a2.651 2.651 0 0 0-2.015-.775c-.714.036-1.615-.31-2.12-.816a2.658 2.658 0 0 0-3.76 0c-.504.505-1.406.852-2.12.816a2.651 2.651 0 0 0-2.014.775A2.65 2.65 0 0 0 3.213 5.8m9.828.826a1 1 0 0 1 .389 1.36l-2.768 4.982a1.019 1.019 0 0 1-.298.343a1.001 1.001 0 0 1-1.23-.045l-2.759-2.207a1 1 0 1 1 1.25-1.562l1.853 1.483l2.203-3.966a1 1 0 0 1 1.36-.388"
+                    clip-rule="evenodd"
+                  />
+                </svg>
                 <div>
                   <h3>React JS</h3>
-                  <p>Basic</p>
+                  <p>Begginner</p>
                 </div>
               </article>
               <article>
-                <img
-                  src="./assets/check.svg"
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="1em"
+                  height="1em"
+                  viewBox="0 0 20 20"
                   alt="Experience icon"
                   class="icon"
-                />
+                >
+                  <path
+                    fill="currentColor"
+                    fill-rule="evenodd"
+                    d="M3.213 5.8c.015.759-.398 1.785-.935 2.321a2.658 2.658 0 0 0 0 3.76c.53.528.92 1.444.935 2.192c.014.662.273 1.32.778 1.824a2.648 2.648 0 0 0 1.748.775c.791.04 1.827.5 2.387 1.06a2.658 2.658 0 0 0 3.759 0c.56-.56 1.596-1.02 2.387-1.06a2.648 2.648 0 0 0 1.748-.775a2.65 2.65 0 0 0 .777-1.826c.015-.746.4-1.656.929-2.184a2.663 2.663 0 0 0 .006-3.766c-.536-.535-.95-1.562-.934-2.32a2.65 2.65 0 0 0-.778-1.932a2.651 2.651 0 0 0-2.015-.775c-.714.036-1.615-.31-2.12-.816a2.658 2.658 0 0 0-3.76 0c-.504.505-1.406.852-2.12.816a2.651 2.651 0 0 0-2.014.775A2.65 2.65 0 0 0 3.213 5.8m9.828.826a1 1 0 0 1 .389 1.36l-2.768 4.982a1.019 1.019 0 0 1-.298.343a1.001 1.001 0 0 1-1.23-.045l-2.759-2.207a1 1 0 1 1 1.25-1.562l1.853 1.483l2.203-3.966a1 1 0 0 1 1.36-.388"
+                    clip-rule="evenodd"
+                  />
+                </svg>
                 <div>
                   <h3>Tailwind CSS</h3>
-                  <p>Basic</p>
+                  <p>Begginner</p>
                 </div>
               </article>
             </div>
@@ -218,59 +353,107 @@
             <h2 class="experience-sub-title">Frontend Development</h2>
             <div class="article-container">
               <article>
-                <img
-                  src="./assets/check.svg"
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="1em"
+                  height="1em"
+                  viewBox="0 0 20 20"
                   alt="Experience icon"
                   class="icon"
-                />
+                >
+                  <path
+                    fill="currentColor"
+                    fill-rule="evenodd"
+                    d="M3.213 5.8c.015.759-.398 1.785-.935 2.321a2.658 2.658 0 0 0 0 3.76c.53.528.92 1.444.935 2.192c.014.662.273 1.32.778 1.824a2.648 2.648 0 0 0 1.748.775c.791.04 1.827.5 2.387 1.06a2.658 2.658 0 0 0 3.759 0c.56-.56 1.596-1.02 2.387-1.06a2.648 2.648 0 0 0 1.748-.775a2.65 2.65 0 0 0 .777-1.826c.015-.746.4-1.656.929-2.184a2.663 2.663 0 0 0 .006-3.766c-.536-.535-.95-1.562-.934-2.32a2.65 2.65 0 0 0-.778-1.932a2.651 2.651 0 0 0-2.015-.775c-.714.036-1.615-.31-2.12-.816a2.658 2.658 0 0 0-3.76 0c-.504.505-1.406.852-2.12.816a2.651 2.651 0 0 0-2.014.775A2.65 2.65 0 0 0 3.213 5.8m9.828.826a1 1 0 0 1 .389 1.36l-2.768 4.982a1.019 1.019 0 0 1-.298.343a1.001 1.001 0 0 1-1.23-.045l-2.759-2.207a1 1 0 1 1 1.25-1.562l1.853 1.483l2.203-3.966a1 1 0 0 1 1.36-.388"
+                    clip-rule="evenodd"
+                  />
+                </svg>
                 <div>
                   <h3>Java</h3>
                   <p>Experienced</p>
                 </div>
               </article>
               <article>
-                <img
-                  src="./assets/check.svg"
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="1em"
+                  height="1em"
+                  viewBox="0 0 20 20"
                   alt="Experience icon"
                   class="icon"
-                />
+                >
+                  <path
+                    fill="currentColor"
+                    fill-rule="evenodd"
+                    d="M3.213 5.8c.015.759-.398 1.785-.935 2.321a2.658 2.658 0 0 0 0 3.76c.53.528.92 1.444.935 2.192c.014.662.273 1.32.778 1.824a2.648 2.648 0 0 0 1.748.775c.791.04 1.827.5 2.387 1.06a2.658 2.658 0 0 0 3.759 0c.56-.56 1.596-1.02 2.387-1.06a2.648 2.648 0 0 0 1.748-.775a2.65 2.65 0 0 0 .777-1.826c.015-.746.4-1.656.929-2.184a2.663 2.663 0 0 0 .006-3.766c-.536-.535-.95-1.562-.934-2.32a2.65 2.65 0 0 0-.778-1.932a2.651 2.651 0 0 0-2.015-.775c-.714.036-1.615-.31-2.12-.816a2.658 2.658 0 0 0-3.76 0c-.504.505-1.406.852-2.12.816a2.651 2.651 0 0 0-2.014.775A2.65 2.65 0 0 0 3.213 5.8m9.828.826a1 1 0 0 1 .389 1.36l-2.768 4.982a1.019 1.019 0 0 1-.298.343a1.001 1.001 0 0 1-1.23-.045l-2.759-2.207a1 1 0 1 1 1.25-1.562l1.853 1.483l2.203-3.966a1 1 0 0 1 1.36-.388"
+                    clip-rule="evenodd"
+                  />
+                </svg>
                 <div>
                   <h3>Mysql</h3>
                   <p>Intermediate</p>
                 </div>
               </article>
               <article>
-                <img
-                  src="./assets/check.svg"
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="1em"
+                  height="1em"
+                  viewBox="0 0 20 20"
                   alt="Experience icon"
                   class="icon"
-                />
+                >
+                  <path
+                    fill="currentColor"
+                    fill-rule="evenodd"
+                    d="M3.213 5.8c.015.759-.398 1.785-.935 2.321a2.658 2.658 0 0 0 0 3.76c.53.528.92 1.444.935 2.192c.014.662.273 1.32.778 1.824a2.648 2.648 0 0 0 1.748.775c.791.04 1.827.5 2.387 1.06a2.658 2.658 0 0 0 3.759 0c.56-.56 1.596-1.02 2.387-1.06a2.648 2.648 0 0 0 1.748-.775a2.65 2.65 0 0 0 .777-1.826c.015-.746.4-1.656.929-2.184a2.663 2.663 0 0 0 .006-3.766c-.536-.535-.95-1.562-.934-2.32a2.65 2.65 0 0 0-.778-1.932a2.651 2.651 0 0 0-2.015-.775c-.714.036-1.615-.31-2.12-.816a2.658 2.658 0 0 0-3.76 0c-.504.505-1.406.852-2.12.816a2.651 2.651 0 0 0-2.014.775A2.65 2.65 0 0 0 3.213 5.8m9.828.826a1 1 0 0 1 .389 1.36l-2.768 4.982a1.019 1.019 0 0 1-.298.343a1.001 1.001 0 0 1-1.23-.045l-2.759-2.207a1 1 0 1 1 1.25-1.562l1.853 1.483l2.203-3.966a1 1 0 0 1 1.36-.388"
+                    clip-rule="evenodd"
+                  />
+                </svg>
                 <div>
                   <h3>Git</h3>
                   <p>Intermediate</p>
                 </div>
               </article>
               <article>
-                <img
-                  src="./assets/check.svg"
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="1em"
+                  height="1em"
+                  viewBox="0 0 20 20"
                   alt="Experience icon"
                   class="icon"
-                />
+                >
+                  <path
+                    fill="currentColor"
+                    fill-rule="evenodd"
+                    d="M3.213 5.8c.015.759-.398 1.785-.935 2.321a2.658 2.658 0 0 0 0 3.76c.53.528.92 1.444.935 2.192c.014.662.273 1.32.778 1.824a2.648 2.648 0 0 0 1.748.775c.791.04 1.827.5 2.387 1.06a2.658 2.658 0 0 0 3.759 0c.56-.56 1.596-1.02 2.387-1.06a2.648 2.648 0 0 0 1.748-.775a2.65 2.65 0 0 0 .777-1.826c.015-.746.4-1.656.929-2.184a2.663 2.663 0 0 0 .006-3.766c-.536-.535-.95-1.562-.934-2.32a2.65 2.65 0 0 0-.778-1.932a2.651 2.651 0 0 0-2.015-.775c-.714.036-1.615-.31-2.12-.816a2.658 2.658 0 0 0-3.76 0c-.504.505-1.406.852-2.12.816a2.651 2.651 0 0 0-2.014.775A2.65 2.65 0 0 0 3.213 5.8m9.828.826a1 1 0 0 1 .389 1.36l-2.768 4.982a1.019 1.019 0 0 1-.298.343a1.001 1.001 0 0 1-1.23-.045l-2.759-2.207a1 1 0 1 1 1.25-1.562l1.853 1.483l2.203-3.966a1 1 0 0 1 1.36-.388"
+                    clip-rule="evenodd"
+                  />
+                </svg>
                 <div>
                   <h3>Node JS</h3>
-                  <p>Basic</p>
+                  <p>Begginner</p>
                 </div>
               </article>
             </div>
           </div>
         </div>
       </div>
-      <img
-        src="./assets/arrow.svg"
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="1em"
+        height="1em"
+        viewBox="0 0 24 24"
         alt="Arrow icon"
         class="icon arrow"
         onclick="location.href='./#projects'"
-      />
+      >
+        <path
+          fill="currentColor"
+          d="m12 19.164l6.207-6.207l-1.414-1.414L12 16.336l-4.793-4.793l-1.414 1.414zm0-5.65l6.207-6.207l-1.414-1.414L12 10.686L7.207 5.893L5.793 7.307z"
+        />
+      </svg>
     </section>
     <section id="projects">
       <p class="section__text__p1">Browse My Recent</p>
@@ -289,13 +472,13 @@
             <div class="btn-container">
               <button
                 class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
+                onclick="location.href='https://github.com/pablojabb'"
               >
                 Github
               </button>
               <button
                 class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
+                onclick="location.href='https://github.com/pablojabb'"
               >
                 Live Demo
               </button>
@@ -313,13 +496,13 @@
             <div class="btn-container">
               <button
                 class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
+                onclick="location.href='https://github.com/pablojabb'"
               >
                 Github
               </button>
               <button
                 class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
+                onclick="location.href='https://github.com/pablojabb'"
               >
                 Live Demo
               </button>
@@ -337,13 +520,13 @@
             <div class="btn-container">
               <button
                 class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
+                onclick="location.href='https://github.com/pablojabb'"
               >
                 Github
               </button>
               <button
                 class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
+                onclick="location.href='https://github.com/pablojabb'"
               >
                 Live Demo
               </button>
@@ -351,34 +534,69 @@
           </div>
         </div>
       </div>
-      <img
-        src="./assets/arrow.svg"
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="1em"
+        height="1em"
+        viewBox="0 0 24 24"
         alt="Arrow icon"
         class="icon arrow"
         onclick="location.href='./#contact'"
-      />
+      >
+        <path
+          fill="currentColor"
+          d="m12 19.164l6.207-6.207l-1.414-1.414L12 16.336l-4.793-4.793l-1.414 1.414zm0-5.65l6.207-6.207l-1.414-1.414L12 10.686L7.207 5.893L5.793 7.307z"
+        />
+      </svg>
     </section>
     <section id="contact">
       <p class="section__text__p1">Get in Touch</p>
       <h1 class="title">Contact Me</h1>
       <div class="contact-info-upper-container">
         <div class="contact-info-container">
-          <img
-            src="./assets/email.svg"
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="1em"
+            height="1em"
+            viewBox="0 0 24 24"
             alt="Email icon"
             class="icon contact-icon email-icon"
-          />
+          >
+            <path
+              fill="currentColor"
+              d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2m-.4 4.25l-7.07 4.42c-.32.2-.74.2-1.06 0L4.4 8.25a.85.85 0 1 1 .9-1.44L12 11l6.7-4.19a.85.85 0 1 1 .9 1.44"
+            />
+          </svg>
           <p>
             <a href="mailto:jumayaanthony@gmail.com">jumayaanthony@gmail.com</a>
           </p>
         </div>
         <div class="contact-info-container">
-          <img
-            src="./assets/facebook.svg"
-            alt="LinkedIn icon"
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="1em"
+            height="1em"
+            viewBox="0 0 24 24"
+            alt="Facebook icon"
             class="icon contact-icon"
-          />
-          <p><a href="https://www.linkedin.com">Facebook</a></p>
+          >
+            <g fill="none">
+              <g clip-path="url(#akarIconsFacebookFill0)">
+                <path
+                  fill="currentColor"
+                  fill-rule="evenodd"
+                  d="M0 12.067C0 18.034 4.333 22.994 10 24v-8.667H7V12h3V9.333c0-3 1.933-4.666 4.667-4.666c.866 0 1.8.133 2.666.266V8H15.8c-1.467 0-1.8.733-1.8 1.667V12h3.2l-.533 3.333H14V24c5.667-1.006 10-5.966 10-11.933C24 5.43 18.6 0 12 0S0 5.43 0 12.067"
+                  clip-rule="evenodd"
+                />
+              </g>
+              <defs>
+                <clipPath id="akarIconsFacebookFill0">
+                  <path fill="#fff" d="M0 0h24v24H0z" />
+                </clipPath>
+              </defs>
+            </g>
+          </svg>
+          <p><a href="https://web.facebook.com/pablojabb69">Facebook</a></p>
         </div>
       </div>
     </section>

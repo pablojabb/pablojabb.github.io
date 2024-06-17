@@ -3,7 +3,7 @@
     height: 83vh;
     margin-bottom: 6rem;
   }
-  
+
   .about-containers {
     flex-wrap: wrap;
   }
@@ -14,11 +14,16 @@
 }
 
 @media screen and (max-width: 1200px) {
+  #name {
+    display: inline-block;
+  }
+
   #desktop-nav {
     display: none;
   }
-  nav{
-    justify-content: space-between;
+
+  nav {
+    height: 10vh;
   }
 
   .btn-container {
@@ -27,10 +32,11 @@
   }
 
   #hamburger-nav {
+    justify-content: space-between;
     display: flex;
   }
 
-  #about{
+  #about {
     margin-top: 2rem;
   }
 
@@ -63,9 +69,21 @@
 }
 
 @media screen and (max-width: 600px) {
-nav{
-  justify-content: space-between;
-}
+  #name {
+    display: inline-block;
+  }
+
+  nav #hamburger-nav {
+    justify-content: space-between;
+  }
+  nav {
+    height: 10vh;
+  }
+
+  .logo img {
+    height: 5rem;
+    width: 5rem;
+  }
 
   #contact,
   footer {
@@ -79,6 +97,7 @@ nav{
     font-size: 1rem;
   }
   footer nav {
+    justify-content: space-around;
     height: fit-content;
     margin-bottom: 2rem;
   }
@@ -87,8 +106,9 @@ nav{
   .btn-container {
     flex-wrap: wrap;
   }
-  .btn-container{
-    margin: 1rem 0;
+  .btn-container {
+    margin-top:5rem;
+    margin-bottom: 1.5rem;
     gap: 1rem;
   }
   .contact-info-container {

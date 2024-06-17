@@ -10,24 +10,24 @@ var text = document.getElementById("themetext");
 
 icon.onclick  = function () {
   const logo = document.querySelector(".golo");
-  logo.classList.toggle("dark");
-  document.body.classList.toggle("dark");
+  logo.classList.toggle("light");
+  document.body.classList.toggle("light");
 
-  if (document.body.classList.contains("dark")) {
-    icon.src = "./assets/lightmode.svg";
-  } else {
+  if (document.body.classList.contains("light")) {
     icon.src = "./assets/darkmode.svg";
+  } else {
+    icon.src = "./assets/lightmode.svg";
   }
 };
 
 text.onclick  = function () {
   const logos = document.querySelector(".golos");
-  logos.classList.toggle("dark");
-  document.body.classList.toggle("dark");
+  logos.classList.toggle("light");
+  document.body.classList.toggle("light");
 
-  if (document.body.classList.contains("dark")) {
-    icon.src = "./assets/lightmode.svg";
-  } else {
+  if (document.body.classList.contains("light")) {
     icon.src = "./assets/darkmode.svg";
+  } else {
+    icon.src = "./assets/lightmode.svg";
   }
 };

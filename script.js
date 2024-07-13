@@ -5,7 +5,7 @@ function toggleMenu() {
   icon.classList.toggle("open");
 }
 
-var icon = document.getElementById("icontheme");
+var icon = document.getElementById("theme--btn");
 var text = document.getElementById("themetext");
 
 icon.onclick  = function () {
@@ -13,11 +13,7 @@ icon.onclick  = function () {
   logo.classList.toggle("light");
   document.body.classList.toggle("light");
 
-  if (document.body.classList.contains("light")) {
-    icon.src = "./assets/darkmode.svg";
-  } else {
-    icon.src = "./assets/lightmode.svg";
-  }
+
 };
 
 text.onclick  = function () {
@@ -25,9 +21,4 @@ text.onclick  = function () {
   logos.classList.toggle("light");
   document.body.classList.toggle("light");
 
-  if (document.body.classList.contains("light")) {
-    icon.src = "./assets/darkmode.svg";
-  } else {
-    icon.src = "./assets/lightmode.svg";
-  }
 };

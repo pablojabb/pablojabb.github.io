@@ -2,638 +2,826 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>Brutalism Portfolio</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+    <link rel="stylesheet" href="./components/comic-btn.css" />
+    <link rel="stylesheet" href="./components/3d-card.css" />
+    <link rel="stylesheet" href="./components/timeline.css" />
+    <link rel="stylesheet" href="./components/project-slider.css" />
+    <link rel="stylesheet" href="/components/project-card.css" />
+    <link rel="stylesheet" href="./components/contact-card.css" />
   </head>
   <body>
-    <nav id="desktop-nav">
-      <div class="logo">
-        <img class="golo" src="./assets/mylogo2.png" alt="My personal logo" />
-      </div>
-      <div>
-        <ul class="nav-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
-          <div class="theme-icon">
-            <label
-              type="checkbox"
-              class="themeToggle st-sunMoonThemeToggleBtn"
-              for="themeToggle"
+    <section id="hero_page" class="parallax">
+      <nav id="desktop-nav">
+        <div class="logo-container">
+          <img class="logo-img" src="./assets/mylogo2.webp" alt="My logo" />
+        </div>
+        <input type="checkbox" id="sidebar-active" />
+        <label for="sidebar-active" class="open-sidebar-button">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="32"
+            viewBox="0 -960 960 960"
+            width="32"
+          >
+            <path
+              d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"
+            />
+          </svg>
+        </label>
+        <label id="overlay" for="sidebar-active"></label>
+        <div class="links-container">
+          <label for="sidebar-active" class="close-sidebar-button">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="32"
+              viewBox="0 -960 960 960"
+              width="32"
             >
-              <input
-                class="themeToggleInput"
-                id="themeToggle"
-                type="checkbox"
-              />
-              <svg
-                stroke="none"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-                height="18"
-                width="18"
-                id="theme--btn"
-              >
-                <mask id="moon-mask">
-                  <rect fill="white" height="20" width="20" y="0" x="0"></rect>
-                  <circle fill="black" r="8" cy="3" cx="11"></circle>
-                </mask>
-                <circle
-                  mask="url(#moon-mask)"
-                  r="8"
-                  cy="10"
-                  cx="10"
-                  class="sunMoon"
-                ></circle>
-                <g>
-                  <circle
-                    r="1.5"
-                    cy="10"
-                    cx="18"
-                    class="sunRay sunRay1"
-                  ></circle>
-                  <circle
-                    r="1.5"
-                    cy="16.928"
-                    cx="14"
-                    class="sunRay sunRay2"
-                  ></circle>
-                  <circle
-                    r="1.5"
-                    cy="16.928"
-                    cx="6"
-                    class="sunRay sunRay3"
-                  ></circle>
-                  <circle
-                    r="1.5"
-                    cy="10"
-                    cx="2"
-                    class="sunRay sunRay4"
-                  ></circle>
-                  <circle
-                    r="1.5"
-                    cy="3.1718"
-                    cx="6"
-                    class="sunRay sunRay5"
-                  ></circle>
-                  <circle
-                    r="1.5"
-                    cy="3.1718"
-                    cx="14"
-                    class="sunRay sunRay6"
-                  ></circle>
-                </g>
-              </svg>
-            </label>
-          </div>
-        </ul>
-      </div>
-    </nav>
-    <nav id="hamburger-nav">
-      <div class="logo">
-        <img class="golos" src="./assets/mylogo2.png" alt="My personal logo" />
-      </div>
-      <div class="hamburger-menu">
-        <div class="hamburger-icon">
-          <label class="hamburger">
-            <input type="checkbox" onclick="toggleMenu()" />
-            <svg viewBox="0 0 32 32">
               <path
-                class="line line-top-bottom"
-                d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22"
-              ></path>
-              <path class="line" d="M7 16 27 16"></path>
+                d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
+              />
             </svg>
           </label>
-        </div>
-        <div class="menu-links">
-          <li><a id="themetext">Theme</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </div>
-      </div>
-    </nav>
-    <section id="profile">
-      <div class="section__pic-container">
-        <img src="./assets/profile-pic.png" alt="John Doe profile picture" />
-      </div>
-      <div class="section__text">
-        <p class="section__text__p1">Hello, I'm</p>
-        <h1 class="title" id="name">Jumaya, Anthony</h1>
-        <p class="section__text__p2">Aspiring Developer</p>
-        <div class="btn-container">
-          <button
-            class="btn btn-color-2"
-            onclick="window.open('./assets/resume-example.pdf')"
-          >
-            Download CV
-          </button>
-          <button class="btn btn-color-1" onclick="location.href='./#contact'">
-            Contact Info
-          </button>
-        </div>
-        <div id="socials-container">
-          <svg
-            class="icon"
-            onclick="
-            location.href='https://web.facebook.com/pablojabb69'"
-            xmlns="http://www.w3.org/2000/svg"
-            width="1em"
-            height="1em"
-            viewBox="0 0 24 24"
-          >
-            <g fill="none">
-              <g clip-path="url(#akarIconsFacebookFill0)">
-                <path
-                  fill="currentColor"
-                  fill-rule="evenodd"
-                  d="M0 12.067C0 18.034 4.333 22.994 10 24v-8.667H7V12h3V9.333c0-3 1.933-4.666 4.667-4.666c.866 0 1.8.133 2.666.266V8H15.8c-1.467 0-1.8.733-1.8 1.667V12h3.2l-.533 3.333H14V24c5.667-1.006 10-5.966 10-11.933C24 5.43 18.6 0 12 0S0 5.43 0 12.067"
-                  clip-rule="evenodd"
-                />
-              </g>
-              <defs>
-                <clipPath id="akarIconsFacebookFill0">
-                  <path fill="#fff" d="M0 0h24v24H0z" />
-                </clipPath>
-              </defs>
-            </g>
-          </svg>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="1em"
-            height="1em"
-            viewBox="0 0 20 20"
-            alt="My linkedin profile"
-            class="iconplus"
-            onclick=""
-          >
-            <path
-              fill="currentColor"
-              d="M10 .4C4.698.4.4 4.698.4 10s4.298 9.6 9.6 9.6s9.6-4.298 9.6-9.6S15.302.4 10 .4M7.65 13.979H5.706V7.723H7.65zm-.984-7.024c-.614 0-1.011-.435-1.011-.973c0-.549.409-.971 1.036-.971s1.011.422 1.023.971c0 .538-.396.973-1.048.973m8.084 7.024h-1.944v-3.467c0-.807-.282-1.355-.985-1.355c-.537 0-.856.371-.997.728c-.052.127-.065.307-.065.486v3.607H8.814v-4.26c0-.781-.025-1.434-.051-1.996h1.689l.089.869h.039c.256-.408.883-1.01 1.932-1.01c1.279 0 2.238.857 2.238 2.699z"
-            />
-          </svg>
 
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="1em"
-            height="1em"
-            viewBox="0 0 64 64"
-            alt="My Github profile"
-            class="icon"
-            onclick="
-            location.href='https://github.com/pablojabb'"
+          <a
+            href="
+          #hero_page"
+            >Home</a
           >
-            <path
-              fill="currentColor"
-              d="M32 0C14 0 0 14 0 32c0 21 19 30 22 30c2 0 2-1 2-2v-5c-7 2-10-2-11-5c0 0 0-1-2-3c-1-1-5-3-1-3c3 0 5 4 5 4c3 4 7 3 9 2c0-2 2-4 2-4c-8-1-14-4-14-15c0-4 1-7 3-9c0 0-2-4 0-9c0 0 5 0 9 4c3-2 13-2 16 0c4-4 9-4 9-4c2 7 0 9 0 9c2 2 3 5 3 9c0 11-7 14-14 15c1 1 2 3 2 6v8c0 1 0 2 2 2c3 0 22-9 22-30C64 14 50 0 32 0"
-            />
-          </svg>
-        </div>
-      </div>
-    </section>
-    <section id="about">
-      <p class="section__text__p1">Get To Know More</p>
-      <h1 class="title">About Me</h1>
-      <div class="section-container">
-        <div class="section__pic-container">
-          <img
-            src="./assets/about-pic.jpg"
-            alt="Profile picture"
-            class="about-pic"
-          />
-        </div>
-        <div class="about-details-container">
-          <div class="about-containers">
-            <div class="details-container">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="1em"
-                height="1em"
-                viewBox="0 0 20 20"
-                alt="Experience icon"
-                class="icon"
-              >
-                <path
-                  fill="currentColor"
-                  d="M4.46 5.16L5 7.46l-.54 2.29l2.01 1.24L7.7 13l2.3-.54l2.3.54l1.23-2.01l2.01-1.24L15 7.46l.54-2.3l-2-1.24l-1.24-2.01l-2.3.55l-2.29-.54l-1.25 2zm5.55 6.34a3.999 3.999 0 1 1 0-8c2.2 0 3.99 1.79 3.99 3.99c0 2.22-1.79 4.01-3.99 4.01m-.02-1C8.33 10.5 7 9.16 7 7.5c0-1.65 1.33-3 2.99-3S13 5.85 13 7.5c0 1.66-1.35 3-3.01 3m3.84 1.1l-1.28 2.24l-2.08-.47L13 19.2l1.4-2.2h2.5zm-7.7.07l1.25 2.25l2.13-.51L7 19.2L5.6 17H3.1z"
-                />
-              </svg>
-              <h3>Experience</h3>
-              <p>
-                <span class="about-label">Java Development</span><br />2 years
-              </p>
-            </div>
-            <div class="details-container">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="1em"
-                height="1em"
-                viewBox="0 0 24 24"
-                alt="Education icon"
-                class="icon"
-              >
-                <path
-                  fill="currentColor"
-                  d="M12 .807L23.835 8.5L22 9.693V16h-2v-5.007l-1 .65V17.5c0 1.47-1.014 2.615-2.253 3.339c-1.265.737-2.945 1.16-4.747 1.16s-3.483-.423-4.747-1.16C6.013 20.115 5 18.969 5 17.499v-5.856L.165 8.5zM7 12.943V17.5c0 .463.33 1.067 1.261 1.61c.908.53 2.227.89 3.739.89s2.831-.36 3.739-.89c.932-.543 1.26-1.147 1.26-1.61v-4.557l-5 3.25zM20.165 8.5L12 3.193L3.835 8.5L12 13.807z"
-                />
-              </svg>
-              <h3>Education</h3>
-              <p>
-                <span class="about-label">
-                  Senior Highschool ICT-Programming</span
-                >
-                <br />ACLC College of Tacloban
-              </p>
-            </div>
-          </div>
-          <div class="text-container">
-            <p>
-              I am a dedicated and passionate programming student looking to
-              build a solid foundation in programming. I am excited about
-              pursuing a career in programming, fuelled by my love for the field
-              and the opportunities it offers. My goal is to make a significant
-              impact by using my skills to solve complex problems and innovate.
-              Apart from my technical interests, I enjoy reading and sharing
-              knowledge with others, which drives my passion for teaching and
-              mentoring. I am eager to continue growing my expertise and achieve
-              success in the programming industry.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="1em"
-        height="1em"
-        viewBox="0 0 24 24"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#experience'"
-      >
-        <path
-          fill="currentColor"
-          d="m12 19.164l6.207-6.207l-1.414-1.414L12 16.336l-4.793-4.793l-1.414 1.414zm0-5.65l6.207-6.207l-1.414-1.414L12 10.686L7.207 5.893L5.793 7.307z"
-        />
-      </svg>
-    </section>
-    <section id="experience">
-      <p class="section__text__p1">Explore My</p>
-      <h1 class="title">Experience</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container">
-            <h2 class="experience-sub-title">Frontend Development</h2>
-            <div class="article-container">
-              <article>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="1em"
-                  height="1em"
-                  viewBox="0 0 20 20"
-                  alt="Experience icon"
-                  class="exp-icon"
-                >
-                  <path
-                    fill="currentColor"
-                    fill-rule="evenodd"
-                    d="M3.213 5.8c.015.759-.398 1.785-.935 2.321a2.658 2.658 0 0 0 0 3.76c.53.528.92 1.444.935 2.192c.014.662.273 1.32.778 1.824a2.648 2.648 0 0 0 1.748.775c.791.04 1.827.5 2.387 1.06a2.658 2.658 0 0 0 3.759 0c.56-.56 1.596-1.02 2.387-1.06a2.648 2.648 0 0 0 1.748-.775a2.65 2.65 0 0 0 .777-1.826c.015-.746.4-1.656.929-2.184a2.663 2.663 0 0 0 .006-3.766c-.536-.535-.95-1.562-.934-2.32a2.65 2.65 0 0 0-.778-1.932a2.651 2.651 0 0 0-2.015-.775c-.714.036-1.615-.31-2.12-.816a2.658 2.658 0 0 0-3.76 0c-.504.505-1.406.852-2.12.816a2.651 2.651 0 0 0-2.014.775A2.65 2.65 0 0 0 3.213 5.8m9.828.826a1 1 0 0 1 .389 1.36l-2.768 4.982a1.019 1.019 0 0 1-.298.343a1.001 1.001 0 0 1-1.23-.045l-2.759-2.207a1 1 0 1 1 1.25-1.562l1.853 1.483l2.203-3.966a1 1 0 0 1 1.36-.388"
-                    clip-rule="evenodd"
-                  />
-                </svg>
-                <div>
-                  <h3>HTML</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="1em"
-                  height="1em"
-                  viewBox="0 0 20 20"
-                  alt="Experience icon"
-                  class="exp-icon"
-                >
-                  <path
-                    fill="currentColor"
-                    fill-rule="evenodd"
-                    d="M3.213 5.8c.015.759-.398 1.785-.935 2.321a2.658 2.658 0 0 0 0 3.76c.53.528.92 1.444.935 2.192c.014.662.273 1.32.778 1.824a2.648 2.648 0 0 0 1.748.775c.791.04 1.827.5 2.387 1.06a2.658 2.658 0 0 0 3.759 0c.56-.56 1.596-1.02 2.387-1.06a2.648 2.648 0 0 0 1.748-.775a2.65 2.65 0 0 0 .777-1.826c.015-.746.4-1.656.929-2.184a2.663 2.663 0 0 0 .006-3.766c-.536-.535-.95-1.562-.934-2.32a2.65 2.65 0 0 0-.778-1.932a2.651 2.651 0 0 0-2.015-.775c-.714.036-1.615-.31-2.12-.816a2.658 2.658 0 0 0-3.76 0c-.504.505-1.406.852-2.12.816a2.651 2.651 0 0 0-2.014.775A2.65 2.65 0 0 0 3.213 5.8m9.828.826a1 1 0 0 1 .389 1.36l-2.768 4.982a1.019 1.019 0 0 1-.298.343a1.001 1.001 0 0 1-1.23-.045l-2.759-2.207a1 1 0 1 1 1.25-1.562l1.853 1.483l2.203-3.966a1 1 0 0 1 1.36-.388"
-                    clip-rule="evenodd"
-                  />
-                </svg>
-                <div>
-                  <h3>CSS</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-            </div>
-          </div>
-          <div class="details-container">
-            <h2 class="experience-sub-title">Backend Development</h2>
-            <div class="article-container">
-              <article>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="1em"
-                  height="1em"
-                  viewBox="0 0 20 20"
-                  alt="Experience icon"
-                  class="exp-icon"
-                >
-                  <path
-                    fill="currentColor"
-                    fill-rule="evenodd"
-                    d="M3.213 5.8c.015.759-.398 1.785-.935 2.321a2.658 2.658 0 0 0 0 3.76c.53.528.92 1.444.935 2.192c.014.662.273 1.32.778 1.824a2.648 2.648 0 0 0 1.748.775c.791.04 1.827.5 2.387 1.06a2.658 2.658 0 0 0 3.759 0c.56-.56 1.596-1.02 2.387-1.06a2.648 2.648 0 0 0 1.748-.775a2.65 2.65 0 0 0 .777-1.826c.015-.746.4-1.656.929-2.184a2.663 2.663 0 0 0 .006-3.766c-.536-.535-.95-1.562-.934-2.32a2.65 2.65 0 0 0-.778-1.932a2.651 2.651 0 0 0-2.015-.775c-.714.036-1.615-.31-2.12-.816a2.658 2.658 0 0 0-3.76 0c-.504.505-1.406.852-2.12.816a2.651 2.651 0 0 0-2.014.775A2.65 2.65 0 0 0 3.213 5.8m9.828.826a1 1 0 0 1 .389 1.36l-2.768 4.982a1.019 1.019 0 0 1-.298.343a1.001 1.001 0 0 1-1.23-.045l-2.759-2.207a1 1 0 1 1 1.25-1.562l1.853 1.483l2.203-3.966a1 1 0 0 1 1.36-.388"
-                    clip-rule="evenodd"
-                  />
-                </svg>
-                <div>
-                  <h3>Java</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="1em"
-                  height="1em"
-                  viewBox="0 0 20 20"
-                  alt="Experience icon"
-                  class="exp-icon"
-                >
-                  <path
-                    fill="currentColor"
-                    fill-rule="evenodd"
-                    d="M3.213 5.8c.015.759-.398 1.785-.935 2.321a2.658 2.658 0 0 0 0 3.76c.53.528.92 1.444.935 2.192c.014.662.273 1.32.778 1.824a2.648 2.648 0 0 0 1.748.775c.791.04 1.827.5 2.387 1.06a2.658 2.658 0 0 0 3.759 0c.56-.56 1.596-1.02 2.387-1.06a2.648 2.648 0 0 0 1.748-.775a2.65 2.65 0 0 0 .777-1.826c.015-.746.4-1.656.929-2.184a2.663 2.663 0 0 0 .006-3.766c-.536-.535-.95-1.562-.934-2.32a2.65 2.65 0 0 0-.778-1.932a2.651 2.651 0 0 0-2.015-.775c-.714.036-1.615-.31-2.12-.816a2.658 2.658 0 0 0-3.76 0c-.504.505-1.406.852-2.12.816a2.651 2.651 0 0 0-2.014.775A2.65 2.65 0 0 0 3.213 5.8m9.828.826a1 1 0 0 1 .389 1.36l-2.768 4.982a1.019 1.019 0 0 1-.298.343a1.001 1.001 0 0 1-1.23-.045l-2.759-2.207a1 1 0 1 1 1.25-1.562l1.853 1.483l2.203-3.966a1 1 0 0 1 1.36-.388"
-                    clip-rule="evenodd"
-                  />
-                </svg>
-                <div>
-                  <h3>JavaScript</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-            </div>
-          </div>
-
-          <div class="details-container">
-            <h2 class="experience-sub-title">Technologies and Databases</h2>
-            <div class="article-container">
-              <article>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="1em"
-                  height="1em"
-                  viewBox="0 0 20 20"
-                  alt="Experience icon"
-                  class="exp-icon"
-                >
-                  <path
-                    fill="currentColor"
-                    fill-rule="evenodd"
-                    d="M3.213 5.8c.015.759-.398 1.785-.935 2.321a2.658 2.658 0 0 0 0 3.76c.53.528.92 1.444.935 2.192c.014.662.273 1.32.778 1.824a2.648 2.648 0 0 0 1.748.775c.791.04 1.827.5 2.387 1.06a2.658 2.658 0 0 0 3.759 0c.56-.56 1.596-1.02 2.387-1.06a2.648 2.648 0 0 0 1.748-.775a2.65 2.65 0 0 0 .777-1.826c.015-.746.4-1.656.929-2.184a2.663 2.663 0 0 0 .006-3.766c-.536-.535-.95-1.562-.934-2.32a2.65 2.65 0 0 0-.778-1.932a2.651 2.651 0 0 0-2.015-.775c-.714.036-1.615-.31-2.12-.816a2.658 2.658 0 0 0-3.76 0c-.504.505-1.406.852-2.12.816a2.651 2.651 0 0 0-2.014.775A2.65 2.65 0 0 0 3.213 5.8m9.828.826a1 1 0 0 1 .389 1.36l-2.768 4.982a1.019 1.019 0 0 1-.298.343a1.001 1.001 0 0 1-1.23-.045l-2.759-2.207a1 1 0 1 1 1.25-1.562l1.853 1.483l2.203-3.966a1 1 0 0 1 1.36-.388"
-                    clip-rule="evenodd"
-                  />
-                </svg>
-                <div>
-                  <h3>Mysql</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="1em"
-                  height="1em"
-                  viewBox="0 0 20 20"
-                  alt="Experience icon"
-                  class="exp-icon"
-                >
-                  <path
-                    fill="currentColor"
-                    fill-rule="evenodd"
-                    d="M3.213 5.8c.015.759-.398 1.785-.935 2.321a2.658 2.658 0 0 0 0 3.76c.53.528.92 1.444.935 2.192c.014.662.273 1.32.778 1.824a2.648 2.648 0 0 0 1.748.775c.791.04 1.827.5 2.387 1.06a2.658 2.658 0 0 0 3.759 0c.56-.56 1.596-1.02 2.387-1.06a2.648 2.648 0 0 0 1.748-.775a2.65 2.65 0 0 0 .777-1.826c.015-.746.4-1.656.929-2.184a2.663 2.663 0 0 0 .006-3.766c-.536-.535-.95-1.562-.934-2.32a2.65 2.65 0 0 0-.778-1.932a2.651 2.651 0 0 0-2.015-.775c-.714.036-1.615-.31-2.12-.816a2.658 2.658 0 0 0-3.76 0c-.504.505-1.406.852-2.12.816a2.651 2.651 0 0 0-2.014.775A2.65 2.65 0 0 0 3.213 5.8m9.828.826a1 1 0 0 1 .389 1.36l-2.768 4.982a1.019 1.019 0 0 1-.298.343a1.001 1.001 0 0 1-1.23-.045l-2.759-2.207a1 1 0 1 1 1.25-1.562l1.853 1.483l2.203-3.966a1 1 0 0 1 1.36-.388"
-                    clip-rule="evenodd"
-                  />
-                </svg>
-                <div>
-                  <h3>Sqlite</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="1em"
-                  height="1em"
-                  viewBox="0 0 20 20"
-                  alt="Experience icon"
-                  class="exp-icon"
-                >
-                  <path
-                    fill="currentColor"
-                    fill-rule="evenodd"
-                    d="M3.213 5.8c.015.759-.398 1.785-.935 2.321a2.658 2.658 0 0 0 0 3.76c.53.528.92 1.444.935 2.192c.014.662.273 1.32.778 1.824a2.648 2.648 0 0 0 1.748.775c.791.04 1.827.5 2.387 1.06a2.658 2.658 0 0 0 3.759 0c.56-.56 1.596-1.02 2.387-1.06a2.648 2.648 0 0 0 1.748-.775a2.65 2.65 0 0 0 .777-1.826c.015-.746.4-1.656.929-2.184a2.663 2.663 0 0 0 .006-3.766c-.536-.535-.95-1.562-.934-2.32a2.65 2.65 0 0 0-.778-1.932a2.651 2.651 0 0 0-2.015-.775c-.714.036-1.615-.31-2.12-.816a2.658 2.658 0 0 0-3.76 0c-.504.505-1.406.852-2.12.816a2.651 2.651 0 0 0-2.014.775A2.65 2.65 0 0 0 3.213 5.8m9.828.826a1 1 0 0 1 .389 1.36l-2.768 4.982a1.019 1.019 0 0 1-.298.343a1.001 1.001 0 0 1-1.23-.045l-2.759-2.207a1 1 0 1 1 1.25-1.562l1.853 1.483l2.203-3.966a1 1 0 0 1 1.36-.388"
-                    clip-rule="evenodd"
-                  />
-                </svg>
-                <div>
-                  <h3>Git/Github</h3>
-                  <p>Begginer</p>
-                </div>
-              </article>
-            </div>
-          </div>
-        </div>
-      </div>
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="1em"
-        height="1em"
-        viewBox="0 0 24 24"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#projects'"
-      >
-        <path
-          fill="currentColor"
-          d="m12 19.164l6.207-6.207l-1.414-1.414L12 16.336l-4.793-4.793l-1.414 1.414zm0-5.65l6.207-6.207l-1.414-1.414L12 10.686L7.207 5.893L5.793 7.307z"
-        />
-      </svg>
-    </section>
-    <section id="projects">
-      <p class="section__text__p1">Browse My Recent</p>
-      <h1 class="title">Projects</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/project-1.png"
-                alt="Project 1"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">
-              Inventory Manangement System (Java)
-            </h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/pablojabb'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/pablojabb'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/project-2.png"
-                alt="Project 2"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">
-              Flowchart Forge: <br />
-              Flowchart Builder <br />
-              (2D Java Game)
-            </h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/pablojabb'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/pablojabb'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/project-3.png"
-                alt="Project 3"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">
-              Point Of Sale <br />
-              Car store <br />(Java)
-            </h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/pablojabb'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/pablojabb'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="1em"
-        height="1em"
-        viewBox="0 0 24 24"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#contact'"
-      >
-        <path
-          fill="currentColor"
-          d="m12 19.164l6.207-6.207l-1.414-1.414L12 16.336l-4.793-4.793l-1.414 1.414zm0-5.65l6.207-6.207l-1.414-1.414L12 10.686L7.207 5.893L5.793 7.307z"
-        />
-      </svg>
-    </section>
-    <section id="contact">
-      <p class="section__text__p1">Get in Touch</p>
-      <h1 class="title">Contact Me</h1>
-      <div class="contact-info-upper-container">
-        <div class="contact-info-container">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="1em"
-            height="1em"
-            viewBox="0 0 24 24"
-            alt="Email icon"
-            class="icon contact-icon email-icon"
+          <a
+            href="
+          #aboutme-page"
+            >About</a
           >
-            <path
-              fill="currentColor"
-              d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2m-.4 4.25l-7.07 4.42c-.32.2-.74.2-1.06 0L4.4 8.25a.85.85 0 1 1 .9-1.44L12 11l6.7-4.19a.85.85 0 1 1 .9 1.44"
-            />
-          </svg>
-          <p>
-            <a href="mailto:jumayaanthony@gmail.com">jumayaanthony@gmail.com</a>
-          </p>
-        </div>
-        <div class="contact-info-container">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="1em"
-            height="1em"
-            viewBox="0 0 24 24"
-            alt="Facebook icon"
-            class="icon contact-icon"
+          <a
+            href="
+          #Projects"
+            >Projects</a
           >
-            <g fill="none">
-              <g clip-path="url(#akarIconsFacebookFill0)">
-                <path
-                  fill="currentColor"
-                  fill-rule="evenodd"
-                  d="M0 12.067C0 18.034 4.333 22.994 10 24v-8.667H7V12h3V9.333c0-3 1.933-4.666 4.667-4.666c.866 0 1.8.133 2.666.266V8H15.8c-1.467 0-1.8.733-1.8 1.667V12h3.2l-.533 3.333H14V24c5.667-1.006 10-5.966 10-11.933C24 5.43 18.6 0 12 0S0 5.43 0 12.067"
-                  clip-rule="evenodd"
-                />
-              </g>
-              <defs>
-                <clipPath id="akarIconsFacebookFill0">
-                  <path fill="#fff" d="M0 0h24v24H0z" />
-                </clipPath>
-              </defs>
-            </g>
-          </svg>
-          <p><a href="https://web.facebook.com/pablojabb69">Facebook</a></p>
-        </div>
-      </div>
-    </section>
-    <footer>
-      <nav>
-        <div class="nav-links-container">
-          <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
+          <a
+            href="
+          #Contacts"
+            >Contacts</a
+          >
         </div>
       </nav>
-      <p>Copyright &#169; 2024 Anthony Jumaya. All Rights Reserved.</p>
-    </footer>
-    <script src="script.js"></script>
+
+      <picture>
+        <source media="(min-width: 1200px)" srcset="./assets/exp.webp" />
+        <source media="(min-width: 1008px)" srcset="./assets/expm.webp" />
+        <source media="(min-width: 480px)" srcset="./assets/exps.webp" />
+        <source media="(min-width: 280px)" srcset="./assets/expxs.webp" />
+        <img class="picpar" src="./assets/exp.webp" alt="e" id="bg" />
+      </picture>
+
+      <picture>
+        <source media="(min-width: 1200px)" srcset="./assets/planes.webp" />
+        <source media="(min-width: 768px)" srcset="./assets/planexs.webp" />
+        <source media="(min-width: 580px)" srcset="./assets/planess.webp" />
+        <source media="(min-width: 200px)" srcset="./assets/planexxs.webp" />
+        <img class="picpar" src="./assets/planess.webp" alt="e" id="planes" />
+      </picture>
+
+      <div class="flexcard-container" id="fc-container">
+        <div class="container">
+          <a href="#"></a>
+          <a href="#"></a>
+          <a href="#Contacts"></a>
+          <a href="#"></a>
+          <div class="card">
+            <div class="card-header">Digilab Solutions Inc.</div>
+            <div class="card-info">
+              <img
+                class="card-info__img"
+                src="./assets/pfp.webp"
+                alt="My Profile"
+              />
+
+              <div class="card-info__text">
+                <h1 class="fullname">Anthony Jumaya</h1>
+                <span class="text-seperator"></span>
+                <p class="label">The Aspiring Dev</p>
+                <div class="card-info__socials">
+                  <img
+                    class="socials-icon"
+                    src="./assets/facebook.svg"
+                    alt="facebook logo"
+                  />
+                  <img
+                    class="socials-icon ig"
+                    src="./assets/ig.svg"
+                    alt="linkedin logo"
+                  />
+                  <img
+                    class="socials-icon"
+                    src="./assets/github.svg"
+                    alt="github logo"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <picture>
+        <source media="(min-width: 1200px)" srcset="./assets/exp2.webp" />
+        <source media="(min-width: 1008px)" srcset="./assets/exp2m.webp" />
+        <source media="(min-width: 480px)" srcset="./assets/exp2s.webp" />
+        <source media="(min-width: 280px)" srcset="./assets/exp2xs.webp" />
+        <img class="picpar" src="./assets/exp.webp" alt="e" id="building" />
+      </picture>
+    </section>
+
+    <section class="row" id="aboutme-page">
+      <div class="imageWrapper autoShow">
+        <img src="./assets/abt-me.webp" />
+      </div>
+      <div class="contentWrapper">
+        <span class="textWrapper autoShow"> <span></span>About Me </span>
+        <h2 class="autoShow">Anthony Jumaya</h2>
+        <p class="autoShow abt-p">
+          I am a dedicated and passionate programming student looking to build a
+          solid foundation in programming. I am excited about pursuing a career
+          in programming, fuelled by my love for the field and the opportunities
+          it offers. My goal is to make a significant impact by using my skills
+          to solve complex problems and innovate. Apart from my technical
+          interests, I enjoy reading and sharing knowledge with others, which
+          drives my passion for teaching and mentoring. I am eager to continue
+          growing my expertise and achieve success in the IT industry.
+        </p>
+        <a href="#Contacts">
+          <button class="comic-button">Get in Touch</button>
+        </a>
+      </div>
+    </section>
+
+    <section id="exp">
+      <div class="exp-content_container">
+        <div class="edu-container">
+          <main class="rows">
+            <!--   *******  Education Section Starts  *******   -->
+
+            <div class="col autoShows">
+              <header class="title">
+                <h2>EDUCATION</h2>
+              </header>
+
+              <div class="contents autoShows">
+                <div class="box">
+                  <h4>2017 - 2022</h4>
+                  <h3>Highschool Days</h3>
+                  <p>
+                    I went to Leyte National High School, where I had a bit of a
+                    rough patch and ended up repeating a year, but it taught me
+                    a lot in the long run.
+                  </p>
+                </div>
+
+                <div class="box">
+                  <h4>2022 - 2024</h4>
+                  <h3>Senior Highschool Days</h3>
+                  <p>
+                    In my senior high school years at ACLC, I got more serious
+                    about my studies. I graduated with the Most Outstanding
+                    Student award in TVL-ICT Programming, earned high honors
+                    from Grade 11 to 12, and received the Best Capstone in
+                    Programming award.
+                  </p>
+                </div>
+                <div class="box">
+                  <h4>2024 - Current</h4>
+                  <h3>College Days</h3>
+                  <p>
+                    I'm currently a freshman at Eastern Visayas State
+                    University, pursuing a degree in BSIT. I'm excited for the
+                    growth and opportunities that lie ahead.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!--   *******  Education Section Ends  *******   -->
+
+            <!--   *******  Experience Section Starts  *******  -->
+
+            <div class="col autoShows">
+              <header class="title">
+                <h2>EXPERIENCE</h2>
+              </header>
+
+              <div class="contents autoShows">
+                <div class="box">
+                  <h4>2022 - Current</h4>
+                  <h3>Freelance Java Developer</h3>
+                  <p>
+                    I completed my group's capstone system in Grade 11, a
+                    project originally meant to be finished in Grade 12. With
+                    the extra time, I became a freelance developer, assisting
+                    other groups and creating custom software for my
+                    schoolmates.
+                  </p>
+                </div>
+                <div class="box">
+                  <h4>2024 - Current</h4>
+                  <h3>Freelance Web Developer</h3>
+                  <p>
+                    I'm currently learning web development through project-based
+                    learning. As a freelance developer, I take on small and
+                    basic projects to gain both experience and income.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!--   *******  Experience Section Ends   *******  -->
+          </main>
+        </div>
+
+        <div class="proj-tech" id="Projects">
+          <main class="proj-main">
+            <div class="slider-title">My Recent Projects</div>
+            <div
+              class="proj-slider"
+              reverse="true"
+              style="--width: 300px; --height: 380px; --quantity: 10"
+            >
+              <div class="list">
+                <div class="item" style="--position: 1">
+                  <article class="article-wrapper">
+                    <div class="rounded-lg container-project">
+                      <img
+                        class="proj-img"
+                        src="./assets/project-1.webp"
+                        alt="project-1"
+                      />
+                    </div>
+                    <div class="project-info">
+                      <div class="flex-pr">
+                        <div class="project-title text-nowrap">
+                          Inventory Management System
+                        </div>
+                        <div class="project-hover">
+                          <svg
+                            style="color: black"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="2em"
+                            height="2em"
+                            color="black"
+                            stroke-linejoin="round"
+                            stroke-linecap="round"
+                            viewBox="0 0 24 24"
+                            stroke-width="2"
+                            fill="none"
+                            stroke="currentColor"
+                          >
+                            <line y2="12" x2="19" y1="12" x1="5"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                          </svg>
+                        </div>
+                      </div>
+                      <div class="types">
+                        <span
+                          style="background-color: #cacaca; color: #4f4f4f"
+                          class="project-type"
+                          >• Java Based</span
+                        >
+                        <span class="project-type">• Capstone Project</span>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+
+                <div class="item" style="--position: 2">
+                  <article class="article-wrapper">
+                    <div class="rounded-lg container-project">
+                      <img
+                        class="proj-img"
+                        src="./assets/project-2.webp"
+                        alt="project-2"
+                      />
+                    </div>
+                    <div class="project-info">
+                      <div class="flex-pr">
+                        <div class="project-title text-nowrap">
+                          Flowchart Forge
+                        </div>
+                        <div class="project-hover">
+                          <svg
+                            style="color: black"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="2em"
+                            height="2em"
+                            color="black"
+                            stroke-linejoin="round"
+                            stroke-linecap="round"
+                            viewBox="0 0 24 24"
+                            stroke-width="2"
+                            fill="none"
+                            stroke="currentColor"
+                          >
+                            <line y2="12" x2="19" y1="12" x1="5"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                          </svg>
+                        </div>
+                      </div>
+                      <div class="types">
+                        <span
+                          style="background-color: #cacaca; color: #4f4f4f"
+                          class="project-type"
+                          >• Java Based</span
+                        >
+                        <span class="project-type">• 2D Game</span>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+
+                <div class="item" style="--position: 3">
+                  <article class="article-wrapper">
+                    <div class="rounded-lg container-project">
+                      <img
+                        class="proj-img"
+                        src="./assets/project-3.webp"
+                        alt="project-3"
+                      />
+                    </div>
+                    <div class="project-info">
+                      <div class="flex-pr">
+                        <div class="project-title text-nowrap">
+                          Mc'lore Car Store
+                        </div>
+                        <div class="project-hover">
+                          <svg
+                            style="color: black"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="2em"
+                            height="2em"
+                            color="black"
+                            stroke-linejoin="round"
+                            stroke-linecap="round"
+                            viewBox="0 0 24 24"
+                            stroke-width="2"
+                            fill="none"
+                            stroke="currentColor"
+                          >
+                            <line y2="12" x2="19" y1="12" x1="5"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                          </svg>
+                        </div>
+                      </div>
+                      <div class="types">
+                        <span
+                          style="background-color: #cacaca; color: #4f4f4f"
+                          class="project-type"
+                          >• Java Based</span
+                        >
+                        <span class="project-type">• Point of Sale System</span>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+
+                <div class="item" style="--position: 4">
+                  <article class="article-wrapper">
+                    <div class="rounded-lg container-project">
+                      <img
+                        class="proj-img"
+                        src="./assets/project-4.webp"
+                        alt="project-4"
+                      />
+                    </div>
+                    <div class="project-info">
+                      <div class="flex-pr">
+                        <div class="project-title text-nowrap">
+                          Oda Figure Shop
+                        </div>
+                        <div class="project-hover">
+                          <svg
+                            style="color: black"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="2em"
+                            height="2em"
+                            color="black"
+                            stroke-linejoin="round"
+                            stroke-linecap="round"
+                            viewBox="0 0 24 24"
+                            stroke-width="2"
+                            fill="none"
+                            stroke="currentColor"
+                          >
+                            <line y2="12" x2="19" y1="12" x1="5"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                          </svg>
+                        </div>
+                      </div>
+                      <div class="types">
+                        <span
+                          style="background-color: #cacaca; color: #4f4f4f"
+                          class="project-type"
+                          >• Java Based</span
+                        >
+                        <span class="project-type">• Point of Sale System</span>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+
+                <div class="item" style="--position: 5">
+                  <article class="article-wrapper">
+                    <div class="rounded-lg container-project">
+                      <img
+                        class="proj-img"
+                        src="./assets/project-5.webp"
+                        alt="project-5"
+                      />
+                    </div>
+                    <div class="project-info">
+                      <div class="flex-pr">
+                        <div class="project-title text-nowrap">
+                          Valowant Gun Shop
+                        </div>
+                        <div class="project-hover">
+                          <svg
+                            style="color: black"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="2em"
+                            height="2em"
+                            color="black"
+                            stroke-linejoin="round"
+                            stroke-linecap="round"
+                            viewBox="0 0 24 24"
+                            stroke-width="2"
+                            fill="none"
+                            stroke="currentColor"
+                          >
+                            <line y2="12" x2="19" y1="12" x1="5"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                          </svg>
+                        </div>
+                      </div>
+                      <div class="types">
+                        <span
+                          style="background-color: #cacaca; color: #4f4f4f"
+                          class="project-type"
+                          >• Java Based</span
+                        >
+                        <span class="project-type">• Point of Sale System</span>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+
+                <div class="item" style="--position: 6">
+                  <article class="article-wrapper">
+                    <div class="rounded-lg container-project">
+                      <img
+                        class="proj-img"
+                        src="./assets/project-6.webp"
+                        alt="project-6"
+                      />
+                    </div>
+                    <div class="project-info">
+                      <div class="flex-pr">
+                        <div class="project-title text-nowrap">
+                          Tclbn Rent a Ball
+                        </div>
+                        <div class="project-hover">
+                          <svg
+                            style="color: black"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="2em"
+                            height="2em"
+                            color="black"
+                            stroke-linejoin="round"
+                            stroke-linecap="round"
+                            viewBox="0 0 24 24"
+                            stroke-width="2"
+                            fill="none"
+                            stroke="currentColor"
+                          >
+                            <line y2="12" x2="19" y1="12" x1="5"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                          </svg>
+                        </div>
+                      </div>
+                      <div class="types">
+                        <span
+                          style="background-color: #cacaca; color: #4f4f4f"
+                          class="project-type"
+                          >• Java Based</span
+                        >
+                        <span class="project-type"
+                          >• Rental Management System</span
+                        >
+                      </div>
+                    </div>
+                  </article>
+                </div>
+
+                <div class="item" style="--position: 7">
+                  <article class="article-wrapper">
+                    <div class="rounded-lg container-project">
+                      <img
+                        class="proj-img"
+                        src="./assets/project-7.webp"
+                        alt="project-7"
+                      />
+                    </div>
+                    <div class="project-info">
+                      <div class="flex-pr">
+                        <div class="project-title text-nowrap">
+                          Tclbn Rent a Court
+                        </div>
+                        <div class="project-hover">
+                          <svg
+                            style="color: black"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="2em"
+                            height="2em"
+                            color="black"
+                            stroke-linejoin="round"
+                            stroke-linecap="round"
+                            viewBox="0 0 24 24"
+                            stroke-width="2"
+                            fill="none"
+                            stroke="currentColor"
+                          >
+                            <line y2="12" x2="19" y1="12" x1="5"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                          </svg>
+                        </div>
+                      </div>
+                      <div class="types">
+                        <span
+                          style="background-color: #cacaca; color: #4f4f4f"
+                          class="project-type"
+                          >• Java Based</span
+                        >
+                        <span class="project-type"
+                          >• Rental Management System</span
+                        >
+                      </div>
+                    </div>
+                  </article>
+                </div>
+
+                <div class="item" style="--position: 8">
+                  <article class="article-wrapper">
+                    <div class="rounded-lg container-project">
+                      <img
+                        class="proj-img"
+                        src="./assets/project-8.webp"
+                        alt="project-8"
+                      />
+                    </div>
+                    <div class="project-info">
+                      <div class="flex-pr">
+                        <div class="project-title text-nowrap">
+                          Gatcha Phone
+                        </div>
+                        <div class="project-hover">
+                          <svg
+                            style="color: black"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="2em"
+                            height="2em"
+                            color="black"
+                            stroke-linejoin="round"
+                            stroke-linecap="round"
+                            viewBox="0 0 24 24"
+                            stroke-width="2"
+                            fill="none"
+                            stroke="currentColor"
+                          >
+                            <line y2="12" x2="19" y1="12" x1="5"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                          </svg>
+                        </div>
+                      </div>
+                      <div class="types">
+                        <span
+                          style="background-color: #cacaca; color: #4f4f4f"
+                          class="project-type"
+                          >• Java Based</span
+                        >
+                        <span class="project-type">• Gatcha like System</span>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+
+                <div class="item" style="--position: 9">
+                  <article class="article-wrapper">
+                    <div class="rounded-lg container-project">
+                      <img
+                        class="proj-img"
+                        src="./assets/project-9.webp"
+                        alt="project-9"
+                      />
+                    </div>
+                    <div class="project-info">
+                      <div class="flex-pr">
+                        <div class="project-title text-nowrap">
+                          Lola Nina's Delicacies
+                        </div>
+                        <div class="project-hover">
+                          <svg
+                            style="color: black"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="2em"
+                            height="2em"
+                            color="black"
+                            stroke-linejoin="round"
+                            stroke-linecap="round"
+                            viewBox="0 0 24 24"
+                            stroke-width="2"
+                            fill="none"
+                            stroke="currentColor"
+                          >
+                            <line y2="12" x2="19" y1="12" x1="5"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                          </svg>
+                        </div>
+                      </div>
+                      <div class="types">
+                        <span
+                          style="background-color: #cacaca; color: #4f4f4f"
+                          class="project-type"
+                          >• Java Based</span
+                        >
+                        <span class="project-type">• Point of Sale System</span>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+
+                <div class="item" style="--position: 10">
+                  <article class="article-wrapper">
+                    <div class="rounded-lg container-project">
+                      <img
+                        class="proj-img"
+                        src="./assets/project-10.webp"
+                        alt="project-10"
+                      />
+                    </div>
+                    <div class="project-info">
+                      <div class="flex-pr">
+                        <div class="project-title text-nowrap">
+                          Vencint Motoparts
+                        </div>
+                        <div class="project-hover">
+                          <svg
+                            style="color: black"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="2em"
+                            height="2em"
+                            color="black"
+                            stroke-linejoin="round"
+                            stroke-linecap="round"
+                            viewBox="0 0 24 24"
+                            stroke-width="2"
+                            fill="none"
+                            stroke="currentColor"
+                          >
+                            <line y2="12" x2="19" y1="12" x1="5"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                          </svg>
+                        </div>
+                      </div>
+                      <div class="types">
+                        <span
+                          style="background-color: #cacaca; color: #4f4f4f"
+                          class="project-type"
+                          >• Java Based</span
+                        >
+                        <span class="project-type">• Point of Sale System</span>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+              </div>
+            </div>
+          </main>
+        </div>
+      </div>
+    </section>
+
+    <section id="Contacts">
+      <div class="brutalist-card_cotainer">
+        <div class="brutalist-card autoShows">
+          <div class="brutalist-card__header">
+            <div class="brutalist-card__icon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="1rem"
+                height="1rem"
+                viewBox="0 0 24 24"
+              >
+                <mask id="lineMdEmailCheck0">
+                  <g
+                    fill="none"
+                    stroke="#fff"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  >
+                    <path
+                      stroke-dasharray="64"
+                      stroke-dashoffset="64"
+                      d="M4 5h16c0.55 0 1 0.45 1 1v12c0 0.55 -0.45 1 -1 1h-16c-0.55 0 -1 -0.45 -1 -1v-12c0 -0.55 0.45 -1 1 -1Z"
+                    >
+                      <animate
+                        fill="freeze"
+                        attributeName="stroke-dashoffset"
+                        dur="0.6s"
+                        values="64;0"
+                      />
+                    </path>
+                    <path
+                      stroke-dasharray="24"
+                      stroke-dashoffset="24"
+                      d="M3 6.5l9 5.5l9 -5.5"
+                    >
+                      <animate
+                        fill="freeze"
+                        attributeName="stroke-dashoffset"
+                        begin="0.6s"
+                        dur="0.2s"
+                        values="24;0"
+                      />
+                    </path>
+                    <path
+                      fill="#000"
+                      fill-opacity="0"
+                      stroke="none"
+                      d="M19 13c3.31 0 6 2.69 6 6c0 3.31 -2.69 6 -6 6c-3.31 0 -6 -2.69 -6 -6c0 -3.31 2.69 -6 6 -6Z"
+                    >
+                      <set
+                        fill="freeze"
+                        attributeName="fill-opacity"
+                        begin="0.8s"
+                        to="1"
+                      />
+                    </path>
+                    <path
+                      stroke-dasharray="10"
+                      stroke-dashoffset="10"
+                      d="M16 19l1.75 1.75l3.75 -3.75"
+                    >
+                      <animate
+                        fill="freeze"
+                        attributeName="stroke-dashoffset"
+                        begin="0.8s"
+                        dur="0.2s"
+                        values="10;0"
+                      />
+                    </path>
+                  </g>
+                </mask>
+                <rect
+                  width="24"
+                  height="24"
+                  fill="white"
+                  mask="url(#lineMdEmailCheck0)"
+                />
+              </svg>
+            </div>
+            <div class="brutalist-card__alert">Get in Touch</div>
+          </div>
+          <div class="brutalist-card__message">
+            Need help with your programming project or want to learn
+            programming? I'm here to guide you to success!
+          </div>
+          <div class="brutalist-card__actions">
+            <a
+              class="brutalist-card__button brutalist-card__button--mark"
+              href="https://www.facebook.com/pablojabb69"
+              target="_blank"
+            >
+              Facebook
+            </a>
+
+            <a
+              class="brutalist-card__button brutalist-card__button--read"
+              href="javascript:void(0);"
+              onclick="copyToClipboard('jumayaanthony@gmail.com')"
+              >Gmail</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <p>Copyright &#169; 2024 Anthony Jumaya. All Rights Reserved.</p>
+      </footer>
+      
+    </section>
+
+    <script src="app.js"></script>
   </body>
 </html>

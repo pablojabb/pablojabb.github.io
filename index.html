@@ -155,7 +155,9 @@
           growing my expertise and achieve success in the IT industry.
         </p>
         <a href="#Contacts">
-          <button class="comic-button">Get in Touch</button>
+          <button class="comic-button autoShow">
+            Let's Create A Project Together
+          </button>
         </a>
       </div>
     </section>
@@ -717,12 +719,13 @@
           <div class="brutalist-card__header">
             <div class="brutalist-card__icon">
               <svg
+              class="animated-svg"
                 xmlns="http://www.w3.org/2000/svg"
                 width="1rem"
                 height="1rem"
                 viewBox="0 0 24 24"
               >
-                <mask id="lineMdEmailCheck0">
+                <mask id="lineMdEmailArrowRight0">
                   <g
                     fill="none"
                     stroke="#fff"
@@ -738,7 +741,7 @@
                       <animate
                         fill="freeze"
                         attributeName="stroke-dashoffset"
-                        dur="0.6s"
+                        dur="1.2s"
                         values="64;0"
                       />
                     </path>
@@ -750,8 +753,8 @@
                       <animate
                         fill="freeze"
                         attributeName="stroke-dashoffset"
-                        begin="0.6s"
-                        dur="0.2s"
+                        begin="1.2s"
+                        dur="0.4s"
                         values="24;0"
                       />
                     </path>
@@ -764,21 +767,34 @@
                       <set
                         fill="freeze"
                         attributeName="fill-opacity"
-                        begin="0.8s"
+                        begin="1.6s"
                         to="1"
                       />
                     </path>
                     <path
-                      stroke-dasharray="10"
-                      stroke-dashoffset="10"
-                      d="M16 19l1.75 1.75l3.75 -3.75"
+                      stroke-dasharray="6"
+                      stroke-dashoffset="6"
+                      d="M16 19h5"
                     >
                       <animate
                         fill="freeze"
                         attributeName="stroke-dashoffset"
-                        begin="0.8s"
-                        dur="0.2s"
-                        values="10;0"
+                        begin="1.6s"
+                        dur="0.4s"
+                        values="6;0"
+                      />
+                    </path>
+                    <path
+                      stroke-dasharray="4"
+                      stroke-dashoffset="4"
+                      d="M21 19l-2 2M21 19l-2 -2"
+                    >
+                      <animate
+                        fill="freeze"
+                        attributeName="stroke-dashoffset"
+                        begin="2s"
+                        dur="0.4s"
+                        values="4;0"
                       />
                     </path>
                   </g>
@@ -787,15 +803,16 @@
                   width="24"
                   height="24"
                   fill="white"
-                  mask="url(#lineMdEmailCheck0)"
+                  mask="url(#lineMdEmailArrowRight0)"
                 />
               </svg>
             </div>
             <div class="brutalist-card__alert">Get in Touch</div>
           </div>
           <div class="brutalist-card__message">
-            Need help with your programming project or want to learn
-            programming? I'm here to guide you to success!
+            Need help with your programming project or want to learn how to
+            develop amazing programming projects? I'm here to guide you to
+            success!
           </div>
           <div class="brutalist-card__actions">
             <a
@@ -819,7 +836,6 @@
       <footer>
         <p>Copyright &#169; 2024 Anthony Jumaya.</p>
       </footer>
-      
     </section>
 
     <script src="app.js"></script>

@@ -209,15 +209,12 @@ nav a {
   align-items: center;
   text-decoration: none;
   color: #fff;
-  perspective: 500px;
-  transform-style: preserve-3d;
-  transition: transform 0.4s ease, border 0.2s ease;
+  transition: transform 1s ease, border 1s ease;
 }
 nav a:hover {
-  border-right: 0.15rem solid #fff;
-  border-bottom: 0.15rem solid #fff;
-  border-radius: 10%;
-  transform: rotateX(5deg) rotateY(-20deg);
+
+  border-left: 0.09rem solid #fff;
+ border-radius: 10%;
 }
 
 nav a:active {
@@ -324,7 +321,7 @@ nav svg {
 
 .autoShow {
   animation: autoShowAnimation both;
-  animation-timeline: view(80% 5%);
+  animation-timeline: view(90% 5%);
 }
 @keyframes autoShowAnimation {
   from {
@@ -382,6 +379,12 @@ footer p {
 #Contacts{
   position: relative;
 }
+
+
+.animated-svg:hover path animate {
+  animation-play-state: running;
+}
+
 
 /* Footer end */
 

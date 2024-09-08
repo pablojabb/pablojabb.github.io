@@ -79,7 +79,7 @@
   .row {
     flex-direction: column;
     height: auto;
-    padding:1rem;
+    padding:2rem;
   }
 
   .row .imageWrapper {
@@ -114,7 +114,7 @@
   .row {
     flex-direction: column;
     height: auto;
-    padding: 1rem;
+    padding: 2rem;
   }
 
   .row .imageWrapper {

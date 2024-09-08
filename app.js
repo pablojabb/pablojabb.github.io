@@ -30,3 +30,13 @@ function copyToClipboard(text) {
       alert('Email Address has been copied to your clipboard');
   }
 }
+
+
+function resetAnimation() {
+  const svg = document.querySelector('.animated-svg');
+  const clone = svg.cloneNode(true); // Clone the SVG element
+  svg.parentNode.replaceChild(clone, svg); // Replace the original with the clone
+}
+
+// Call resetAnimation every 2 seconds
+setInterval(resetAnimation, 3500);

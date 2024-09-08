@@ -313,7 +313,7 @@ nav svg {
   font-family: var(--ff_pubsans);
   font-size: 1rem;
   line-height: 1.5rem;
-  padding-bottom: 3rem;
+  padding-bottom: 2rem;
   padding-right: 1rem;
   text-align: justify;
 }
@@ -358,21 +358,25 @@ nav svg {
 /* exp page end */
 
 
+
 /* Footer start */
 footer {
   height: 10vh;
   position: absolute;
   bottom: 0;
-  left: 0;
-  width: 100%;
+  left: 50%;
+  transform: translateX(-50%);
   margin: 0 0.8rem;
-  word-wrap: normal;
+  /* word-wrap: normal; */
 }
+
+
 
 footer p {
   text-align: center;
   font-size: 1rem;
   font-family: var(--ff_arch);
+  
 }
 
 #Contacts{

@@ -16,7 +16,7 @@ window.addEventListener('scroll', () => {
 function copyToClipboard(text) {
   if (navigator.clipboard) {
       navigator.clipboard.writeText(text).then(() => {
-          alert('Text copied to clipboard!');
+        alert('Email Address has been copied to your clipboard');
       }).catch(err => {
           console.error('Failed to copy: ', err);
       });
@@ -27,6 +27,6 @@ function copyToClipboard(text) {
       tempInput.select();
       document.execCommand('copy');
       document.body.removeChild(tempInput);
-      alert('Text copied to clipboard using fallback method!');
+      alert('Email Address has been copied to your clipboard');
   }
 }
